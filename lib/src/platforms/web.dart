@@ -73,7 +73,7 @@ class _WebMachineIO implements PlatformIO {
     // var binary = new ByteData.view(new Int8List.fromList(await resource.readAsBytes()).buffer);
 
     var resource = Uri.parse(
-        '${Uri.base.replace(fragment: null)}packages/time_machine/data/$path/$filename');
+        '${Uri.base.replace(fragment: null)}assets/packages/time_machine/data/$path/$filename');
     var binary =
         ByteData.view(Int8List.fromList(await _readAsBytes(resource)).buffer);
 
@@ -86,7 +86,7 @@ class _WebMachineIO implements PlatformIO {
     // return json.decode(await resource.readAsString());
 
     var resource = Uri.parse(
-        '${Uri.base.replace(fragment: null)}packages/time_machine/data/$path/$filename');
+        '${Uri.base.replace(fragment: null)}assets/packages/time_machine/data/$path/$filename');
     return json.decode(await _readAsString(_resolveUri(resource), null));
   }
 }
